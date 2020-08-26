@@ -31,10 +31,10 @@ if (process.env_NODE_ENV === 'production') {
     });
 }
 
-app.get('/', (req,res)=>{
-    res.send({ 'hi': 'there',
-'fuck': 'you' });
-});
+//app.get('/', (req,res)=>{
+//    res.send({ 'hi': 'there',
+//'fuck': 'you' });
+//});
 
 // use environment var PORT, or local 5000 (if dev)
 const PORT = process.env.PORT || 5000;
