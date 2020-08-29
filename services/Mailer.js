@@ -17,7 +17,9 @@ class Mailer extends helper.Mail {
         this.addContent(this.body); // uses addContent function from Mail & registers this.body to it
 
         // enable click-tracking inside of email using addClickTracking helper ftn we'll build
-        this.addClickTracking()
+        this.addClickTracking();
+
+        this.addRecipients();
 
     }
 
@@ -49,7 +51,7 @@ class Mailer extends helper.Mail {
     async send() {
         const request = this.sendGridAPI.emptyRequest({
             method: 'POST',
-            path: v3/mail/send,
+            path: 'v3/mail/send',
             body: this.toJSON(),
         });
 
