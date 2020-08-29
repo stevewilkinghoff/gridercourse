@@ -11,6 +11,10 @@ import reduxThunk from 'redux-thunk';
 import App from './components/App';
 import reducers from './reducers';  // import all reducers from reducers directory
 
+import axios from 'axios'; // temp test code to test backend rouute for emailing
+window.axios = axios;       // temp test code to test backend rouute for emailing
+
+
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
