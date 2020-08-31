@@ -12,7 +12,8 @@ class SurveyNew extends Component {
     //helper method to render based on state
     renderContent() {
         if (this.state.showSurveyReview===true){
-            return <SurveyReview />
+            return <SurveyReview 
+            onCancel = { () => this.setState({showSurveyReview:false})}/>
         };
         return(
             <SurveyForm 

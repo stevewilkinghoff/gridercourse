@@ -62,6 +62,7 @@ function validate(values) {
 // handleSubmit -above - is a reduxForm function
 export default reduxForm({
     validate: validate,
-    form: 'surveyForm'
+    form: 'surveyForm',
+    destroyOnUnmount: false
 })(SurveyForm);
 
