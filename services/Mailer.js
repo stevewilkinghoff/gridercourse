@@ -7,7 +7,7 @@ class Mailer extends helper.Mail {
         super();
         this.sendGridAPI = sendgrid(keys.sendGridKey);
         // helper.Email (below) is a helper function from sendgrid library
-        this.from_email = new helper.Email('stevewilkinghoff@gmail.com');
+        this.from_email = new helper.Email('steve@bizdoggroup.com');
         this.subject = subject;
         // helper.Content (below) is a helper function from sendgrid library
         this.body = new helper.Content('text/html', content);
